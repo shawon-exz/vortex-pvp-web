@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Tier | Minecraft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ব্লকি ব্যাকগ্রাউন্ড -->
+    <div class="bg-blocks"></div>
+
+    <!-- নেভিগেশন -->
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="#" class="logo">⛏️ VORTEX<span>TIER</span></a>
+            <ul class="nav-menu">
+                <li><a href="#home">হোম</a></li>
+                <li><a href="#tiers">টায়ার টেস্ট</a></li>
+                <li><a href="#discord">ডিসকর্ড</a></li>
+            </ul>
+            <a href="#discord" class="btn btn-small">Join Discord</a>
+        </div>
+    </nav>
+
+    <!-- হিরো সেকশন -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-tag">✦ SERVER ONLINE ✦</p>
+                <h1 class="hero-title">Welcome to <span>VORTEX</span></h1>
+                <p class="hero-sub">Join our Discord Server & test your Minecraft tier!</p>
+                <div class="hero-buttons">
+                    <a href="#tiers" class="btn btn-green">🎮 Test Your Tier</a>
+                    <a href="#discord" class="btn btn-outline">💬 Join Discord</a>
+                </div>
+                <!-- ভাসমান ব্লক -->
+                <div class="floating-blocks">
+                    <div class="block block-1"></div>
+                    <div class="block block-2"></div>
+                    <div class="block block-3"></div>
+                    <div class="block block-4"></div>
+                    <div class="block block-5"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- টায়ার টেস্ট -->
+    <section id="tiers" class="tiers">
+        <div class="container">
+            <h2 class="section-title">⚔️ Test Your Minecraft Tier</h2>
+            <p class="section-sub">কয়েকটা প্রশ্নের উত্তর দাও, তোমার টায়ার বের করি!</p>
+
+            <div class="quiz-card" id="quiz">
+                <div class="quiz-progress"><div class="quiz-bar" id="quizBar"></div></div>
+                <p class="quiz-question" id="quizQuestion">তোমার PvP স্টাইল কোনটা?</p>
+                <div class="quiz-options" id="quizOptions"></div>
+                <div class="quiz-result hidden" id="quizResult">
+                    <h3 id="resultTitle">🏆</h3>
+                    <p id="resultText"></p>
+                    <button class="btn btn-green" onclick="restartQuiz()">আবার খেলো</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- টায়ার কার্ড -->
+    <section class="tier-cards">
+        <div class="container">
+            <h2 class="section-title">🏅 টায়ার লেভেল</h2>
+            <div class="cards">
+                <div class="card card-wood">
+                    <h3>🪵 Wood</h3>
+                    <p>নতুন খেলোয়াড় — শুরু করো!</p>
+                </div>
+                <div class="card card-iron">
+                    <h3>⚙️ Iron</h3>
+                    <p>ভালো খেলো, কিন্তু আরও প্র্যাকটিস দরকার</p>
+                </div>
+                <div class="card card-gold">
+                    <h3>🪙 Gold</h3>
+                    <p>শক্তিশালী খেলোয়াড় — সবাই জানে তোকে!</p>
+                </div>
+                <div class="card card-diamond">
+                    <h3>💎 Diamond</h3>
+                    <p>প্রো লেভেল — ভয়ংকর যোদ্ধা!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ডিসকর্ড সেকশন -->
+    <section id="discord" class="discord">
+        <div class="container">
+            <h2 class="section-title">💬 Join Our Discord Server</h2>
+            <p class="section-sub">হাজারো গেমার, ইভেন্ট, আর মজার আড্ডা — এখনই জয়েন করো!</p>
+            <a href="https://discord.gg/YOUR_INVITE_CODE" class="btn btn-discord">🚀 Join Now</a>
+        </div>
+    </section>
+
+    <!-- ফুটার -->
+    <footer class="footer">
+        <p>© 2026 Vortex Tier — Made with 💚 in Minecraft Style</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
