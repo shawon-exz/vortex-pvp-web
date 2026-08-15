@@ -1,0 +1,330 @@
+/* ===== বেসিক ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f0f0f;
+    color: #e8e8e8;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 90px 0;
+    position: relative;
+}
+
+h1, h2, h3, .logo, .btn, .hero-tag {
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* ===== ব্লকি ব্যাকগ্রাউন্ড ===== */
+.bg-blocks {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+        repeating-linear-gradient(0deg, transparent 0 63px, #2a2a2a 63px 64px),
+        repeating-linear-gradient(90deg, transparent 0 63px, #2a2a2a 63px 64px);
+}
+
+/* ===== নেভিগেশন ===== */
+.navbar {
+    background: rgba(15, 15, 15, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid #3d8b40;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-shadow: 2px 2px 0 #3d8b40;
+}
+
+.logo span { color: #55ff5e; }
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover { color: #55ff5e; }
+
+/* ===== বাটন ===== */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 0.7rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    image-rendering: pixelated;
+}
+
+.btn-small { padding: 10px 18px; font-size: 0.6rem; }
+
+.btn-green {
+    background: #4caf50;
+    color: #0f0f0f;
+    box-shadow: 0 6px 0 #2e7d32;
+}
+
+.btn-green:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 0 #2e7d32;
+}
+
+.btn-green:active {
+    transform: translateY(3px);
+    box-shadow: 0 3px 0 #2e7d32;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #55ff5e;
+    border: 3px solid #55ff5e;
+    box-shadow: 0 6px 0 rgba(85,255,94,0.3);
+}
+
+.btn-outline:hover { background: rgba(85,255,94,0.1); transform: translateY(-3px); }
+
+.btn-discord {
+    background: #5865f2;
+    color: #fff;
+    font-size: 0.8rem;
+    box-shadow: 0 6px 0 #3b45b8;
+}
+
+.btn-discord:hover { transform: translateY(-3px); box-shadow: 0 9px 0 #3b45b8; }
+
+/* ===== হিরো ===== */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at 50% 30%, rgba(76,175,80,0.15), transparent 60%);
+}
+
+.hero-tag {
+    font-size: 0.7rem;
+    color: #55ff5e;
+    margin-bottom: 25px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+.hero-title {
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0 #1a1a1a;
+}
+
+.hero-title span {
+    color: #55ff5e;
+    text-shadow: 3px 3px 0 #2e7d32;
+}
+
+.hero-sub {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 35px;
+}
+
+.hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+/* ===== ভাসমান ব্লক অ্যানিমেশন ===== */
+.floating-blocks { position: relative; height: 120px; margin-top: 40px; }
+
+.block {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0,0,0,0.4);
+    animation: floatBlock 3s ease-in-out infinite;
+}
+
+.block-1 { left: 10%; background: #4caf50; animation-delay: 0s; }
+.block-2 { left: 30%; background: #8d6e63; animation-delay: 0.5s; }
+.block-3 { left: 50%; background: #b0bec5; animation-delay: 1s; }
+.block-4 { left: 70%; background: #26c6da; animation-delay: 1.5s; }
+.block-5 { left: 88%; background: #ffd54f; animation-delay: 2s; }
+
+@keyframes floatBlock {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(15deg); }
+}
+
+/* ===== টায়ার টেস্ট ===== */
+.section-title {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    text-align: center;
+    color: #55ff5e;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.section-sub {
+    text-align: center;
+    color: #999;
+    margin-bottom: 45px;
+}
+
+.quiz-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #161616;
+    border: 3px solid #3d8b40;
+    padding: 35px;
+    box-shadow: 8px 8px 0 rgba(61,139,64,0.3);
+}
+
+.quiz-progress {
+    height: 12px;
+    background: #2a2a2a;
+    margin-bottom: 25px;
+    border: 2px solid #3d8b40;
+}
+
+.quiz-bar {
+    height: 100%;
+    width: 0%;
+    background: #55ff5e;
+    transition: width 0.4s;
+}
+
+.quiz-question {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.quiz-options { display: flex; flex-direction: column; gap: 12px; }
+
+.quiz-option {
+    background: #222;
+    border: 2px solid #3a3a3a;
+    color: #ddd;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.quiz-option:hover {
+    border-color: #55ff5e;
+    background: #1d2a1d;
+    transform: translateX(5px);
+}
+
+.quiz-result { text-align: center; }
+
+.quiz-result h3 {
+    font-size: 1.3rem;
+    color: #ffd54f;
+    margin-bottom: 15px;
+    animation: popIn 0.5s ease;
+}
+
+.quiz-result p { color: #ccc; margin-bottom: 25px; line-height: 1.7; }
+
+@keyframes popIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    70% { transform: scale(1.15); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.hidden { display: none; }
+
+/* ===== টায়ার কার্ড ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #161616;
+    border: 3px solid #3a3a3a;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.card h3 { font-size: 0.8rem; margin-bottom: 12px; color: #fff; }
+.card p { color: #999; font-size: 0.95rem; }
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 0 rgba(0,0,0,0.4);
+}
+
+.card-wood:hover { border-color: #8d6e63; }
+.card-iron:hover { border-color: #b0bec5; }
+.card-gold:hover { border-color: #ffd54f; }
+.card-diamond:hover { border-color: #26c6da; }
+
+/* ===== ডিসকর্ড ===== */
+.discord {
+    text-align: center;
+    background: linear-gradient(180deg, #0f0f0f, #1a1a2e);
+    border-top: 3px solid #5865f2;
+    border-bottom: 3px solid #5865f2;
+}
+
+/* ===== ফুটার ===== */
+.footer {
+    background: #0a0a0a;
+    text-align: center;
+    padding: 25px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ===== রেসপনসিভ ===== */
+@media (max-width: 700px) {
+    .nav-menu { display: none; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .block { width: 30px; height: 30px; }
+  }
